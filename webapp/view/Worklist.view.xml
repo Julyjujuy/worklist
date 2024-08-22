@@ -84,13 +84,26 @@
 						type="Navigation"
 						press=".onPress">
 						<cells>
-							<ObjectIdentifier
-								title="{ProductName}"/>
-							<ObjectNumber
-								number="{
-									path: 'UnitsInStock',
-									formatter: '.formatter.numberUnit'
-								}"/>
+							 <ObjectIdentifier
+            title="{ProductName}"/>
+         <Text text = "{Supplier/CompanyName}"/>
+         <ObjectNumber
+            unit="EUR"
+            number="{
+               path: 'UnitPrice',
+               formatter: '.formatter.numberUnit'
+            }"/>
+         <ObjectNumber
+            number="{UnitsOnOrder}"
+            unit="PC"/>
+         <ObjectNumber
+            number="{UnitsInStock}"
+            unit="PC"
+            state="{
+               path: 'UnitsInStock',
+               formatter: '.formatter.quantityState'
+            }"/>
+
 						</cells>
 					</ColumnListItem>
 				</items>
