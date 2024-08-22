@@ -83,6 +83,7 @@
 				<Property Name="Discount" Type="Edm.Single" Nullable="false"/>
 				<NavigationProperty Name="Order" Relationship="NorthwindModel.FK_Order_Details_Orders" FromRole="Order_Details" ToRole="Orders"/>
 				<NavigationProperty Name="Product" Relationship="NorthwindModel.FK_Order_Details_Products" FromRole="Order_Details" ToRole="Products"/>
+				<NavigationProperty Name="Supplier" Relationship="NorthwindModel.FK_Products_Suppliers" FromRole="Products" ToRole="Suppliers"/>
 			</EntityType>
 			<EntityType Name="Order">
 				<Key>
